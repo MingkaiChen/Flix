@@ -53,9 +53,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailsViewController = segue.destination as! MovieDetailsViewController
-//        detailsViewController.titleLabel.text = movies[tableView.indexPath(for: sender as! UITableViewCell)!.row]["title"] as! String
-//        detailsViewController.synopsisLabel.text = movies[tableView.indexPath(for: sender as! UITableViewCell)!.row]["overview"] as! String
-//        detailsViewController.posterImageView.af.setImage(withURL: URL(string: ("https://image.tmdb.org/t/p/w154" + (movies[tableView.indexPath(for: sender as! UITableViewCell)!.row]["poster_path"] as! String)))!)
         detailsViewController.movie = movies[tableView.indexPath(for: sender as! UITableViewCell)!.row]
         tableView.deselectRow(at: tableView.indexPath(for: sender as! UITableViewCell)!, animated: true)
     }

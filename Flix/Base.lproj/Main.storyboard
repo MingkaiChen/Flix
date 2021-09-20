@@ -123,6 +123,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="posterImageView" destination="JF3-oq-nKk" id="kth-jm-mXC"/>
+                                            <segue destination="TXL-rw-n1h" kind="show" id="gIY-1y-vWi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -226,6 +227,9 @@
             <point key="canvasLocation" x="904.79999999999995" y="958.37438423645324"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gIY-1y-vWi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>

@@ -48,6 +48,13 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.posterImageView.af.setImage(withURL: URL(string: ("https://image.tmdb.org/t/p/original" + (movies[indexPath.item]["poster_path"] as! String)))!)
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movies[movieGridCollectionView.indexPath(for: sender as! UICollectionViewCell)!.item]
+        //tableView.deselectRow(at: movieGridCollectionView.indexPath(for: sender as! UICollectionViewCell)!, animated: true)
+    }
+
 
     /*
     // MARK: - Navigation
